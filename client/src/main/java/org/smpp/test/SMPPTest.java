@@ -443,7 +443,8 @@ public class SMPPTest {
 			request.setSourceAddr(sourceAddress);
 			request.setDestAddr(destAddress);
 			request.setReplaceIfPresentFlag(replaceIfPresentFlag);
-			request.setShortMessage(shortMessage,Data.ENC_GSM7BIT);
+			request.setShortMessage(shortMessage,Data.ENC_UTF16_BE); //中文使用UnicodeBigUnmarked
+			System.out.println("encoding = "+Data.ENC_UTF16_BE);
 			request.setScheduleDeliveryTime(scheduleDeliveryTime);
 			request.setValidityPeriod(validityPeriod);
 			request.setEsmClass(esmClass);
